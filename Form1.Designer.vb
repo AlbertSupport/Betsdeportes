@@ -61,7 +61,7 @@ Partial Class Form1
         Controls.Add(PictureBox1)
         Controls.Add(WebView21)
         Name = "Form1"
-        Text = "BetsDeportes v1.0"
+        Text = "BetsDeportes v1.4 Cashier"
         CType(WebView21, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
