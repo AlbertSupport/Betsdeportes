@@ -44,9 +44,9 @@ Partial Class Form1
         ' PictureBox1
         ' 
         PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        PictureBox1.BackColor = SystemColors.ActiveCaptionText
+        PictureBox1.BackColor = Color.FromArgb(CByte(16), CByte(16), CByte(14))
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(511, 0)
+        PictureBox1.Location = New Point(418, 0)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(223, 60)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage

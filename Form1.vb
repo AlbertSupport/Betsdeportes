@@ -68,6 +68,7 @@ Public Class Form1
             AddHandler WebView21.KeyDown, AddressOf WebView21_KeyDown
             AddHandler WebView21.CoreWebView2.NavigationStarting, AddressOf WebView21_NavigationStarting
             AddHandler WebView21.CoreWebView2.NavigationCompleted, AddressOf RemoveBackgroundScript
+            WebView21.CoreWebView2.Settings.IsStatusBarEnabled = False
             WebView21.CoreWebView2.Settings.AreDevToolsEnabled = False
 
         Catch ex As Exception
@@ -116,6 +117,8 @@ Public Class Form1
         Dim script As String = "
     (function() {
         function applyChanges() {
+            
+
             let logoElement = document.querySelector('.logo');
             if (logoElement) {
                 logoElement.style.setProperty('background', 'none', 'important');
@@ -126,7 +129,9 @@ Public Class Form1
                 logoElement2.style.setProperty('background', 'none', 'important');
                 logoElement2.style.backgroundColor = '#B6B6BB'; 
             }
-
+                
+          
+                
             let logoutButton = document.querySelector('li.logOut');
             if (logoutButton) {
                 logoutButton.parentNode.removeChild(logoutButton);
@@ -136,14 +141,8 @@ Public Class Form1
             if (checkIcons.length > 3 && checkIcons[3].parentNode) {
                 checkIcons[3].parentNode.removeChild(checkIcons[3]);
             }
-            if (checkIcons[0] && checkIcons[0].parentNode) {
-                checkIcons[0].parentNode.removeChild(checkIcons[0]);
-            }
+            
 
-            let settings = document.querySelector('li.settings');
-            if (settings && settings.parentNode) {
-                settings.parentNode.removeChild(settings);
-            }
 
             let paises = document.querySelector('li#langOpen');
             if (paises && paises.parentNode) {
